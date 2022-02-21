@@ -1,4 +1,4 @@
-import ConfigParser
+import configparser
 import inspect
 import os
 import wordclock_tools.wordclock_display as wcd
@@ -7,7 +7,7 @@ import time
 
 basePath = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 pathToConfigFile = basePath + '/wordclock_config/wordclock_config.cfg'
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read(pathToConfigFile)
 
 config.set('wordclock', 'base_path', basePath)
